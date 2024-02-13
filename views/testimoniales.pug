@@ -1,0 +1,22 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+        .row 
+
+            h2.d-block.w-100.text-center Agrega un testimonial
+
+            .row.justify-content-center.col
+                .col-md-8
+                    form(action="" method="POST")
+                        .form-group
+                            label(for="name") Nombre 
+                            input#name(type="text")(type="text", placeholder="Tu nombre", name="name" class="form-control")
+                        .form-group
+                            label(for="email") Correo Electronico 
+                            input#email(type="text", placeholder="Tu email", name="email" class="form-control")
+                        .form-group
+                            label(for="mensaje") Mensaje 
+                            textarea#mensaje(name="mensaje", cols="30", rows="3", class="form-control") 
+                        input.btn.btn-success.btn-block(type="submit")
